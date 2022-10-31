@@ -1,23 +1,21 @@
 let ws = new WebSocket('wss://stream.binance.com:9443/ws/btcbusd@trade');
 const price = document.getElementById("valorBTN")
+let numeroBTN;
 
 ws.onmessage = (event) => {
     let stockObject = JSON.parse(event.data);
     price.innerHTML = stockObject.p;
-    let numeroBTN = parseFloat(stockObject.p);
+    numeroBTN = parseFloat(stockObject.p);
     //console.log(numeroBTN)
     //console.log(stockObject.p);
 }
 
 function convertirBTN() {
-    
-    //let stockObject = JSON.parse(event.data);
-    //let numeroBTN = parseFloat(stockObject.p);
-    let bitcoin; 
+    let bitcoin = numeroBTN; 
     let dolares;
     let resultado = 0;
 
-
+    console.log(bitcoin)
     dolares = parseFloat(document.getElementById("dolares"). value);
 
     resultado = dolares / bitcoin; 
