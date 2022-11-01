@@ -5,25 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convertidor</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
-    <label>Ingrese la cantidad de dolares $:</label>
+
+    <h1>Convertidor de moneda</h1>
+
+    <label>Ingrese la cantidad de dolares USD$:</label>
     <input type="number" id="dolares">
     <br>
     <button type="button" class="btnConvertir" onclick="convertirColones()">Convertir a colones</button>
     <br>
-    <label>La cantidad de dolares en colones es:</label>
-    <label for="" id="resulColon"></label>
+    <label>La cantidad de dólares en colones salvadoreños es SVC₡:</label>
+    <label for="" id="resulColon" class="resulColon">-</label>
     <br>
-    <button type="button" class="btnConvertir" onclick="convertirBTN()">Convertir a Bitcoins</button>
+    <button type="button" class="btnConvertir"  onclick="convertirBTN()">Convertir a Bitcoins</button>
+    <br>
+    <label>La cantidad de dólares en Bitcoin es BTC฿:</label>
+    <label id="resultBTN" class="resulColon">-</label>
     <br>
     <label>El valor actual de Bitcoin es:</label>
-    <label id="valorBTN"></label>
+    <label id="valorBTN" class="resulColon">-</label>
     <br>
-    <label>La cantidad de dolares en Bitcoin es:</label>
-    <label id="resultBTN"></label>
-    <br>
-    
 </body>
 <script src="JS/convertirABitcoin.js"></script>
 <script src="JS/convertidorAColon.js"></script>
